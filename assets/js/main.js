@@ -314,3 +314,19 @@ function revealInstructions() {
   instructionsText.classList.remove("hide");
   interactiveMenuContent.classList.add("hide");
 }
+
+/**
+ * Plays a random glitch video and hides the game instructions, revealing the main menu.
+ */
+function hideInstructions() {
+  const randomNum = getRandomNumber(1, 4);
+  const videoElementHTML = `
+    <video class="glitch-video" autoplay muted>
+        <source src="assets/videos/glitch-effect-${randomNum}.mp4" type="video/mp4" />
+    </video>
+  `;
+  interactiveMenu.insertAdjacentHTML("beforeend", videoElementHTML);
+  setTimeout(() => document.querySelector(".glitch-video").remove(), 300);
+  instructionsText.classList.add("hide");
+  interactiveMenuContent.classList.remove("hide");
+}
