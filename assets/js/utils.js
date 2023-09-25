@@ -17,3 +17,15 @@ export function shuffle(array) {
   }
   return shuffledArray;
 }
+
+/**
+ * Generates a random number between the specified minimum and maximum values.
+ *
+ * @param {number} min - The minimum value.
+ * @param {number} max - The maximum value.
+ * @returns {number} A random integer between min and max.
+ *
+ */
+export function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
