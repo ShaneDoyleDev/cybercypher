@@ -22,3 +22,28 @@ const instructionsBackButton = document.querySelector(
   ".instructions-back-button"
 );
 const gameBackButton = document.querySelector(".back-button");
+
+// --------------------------
+// Global Variables & Constants
+// --------------------------
+
+const TIMEOUT_DURATION = 1000;
+let gameDifficulty;
+let playerLives;
+let timerSeconds;
+let countdownInterval;
+
+const gameDifficulties = {
+  novice: {
+    playerLives: 12,
+    timerSeconds: 90,
+  },
+  pro: {
+    playerLives: 8,
+    timerSeconds: 60,
+  },
+  elite: {
+    playerLives: 5,
+    timerSeconds: 30,
+  },
+};
