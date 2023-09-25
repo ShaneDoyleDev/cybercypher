@@ -298,3 +298,19 @@ function revealMenu() {
   menuFrame.classList.remove("hide");
   gridContainer.classList.add("hide");
 }
+
+/**
+ * Plays a random glitch video and displays the game instructions.
+ */
+function revealInstructions() {
+  const randomNum = getRandomNumber(1, 4);
+  const videoElementHTML = `
+    <video class="glitch-video" autoplay muted>
+        <source src="assets/videos/glitch-effect-${randomNum}.mp4" type="video/mp4" />
+    </video>
+  `;
+  interactiveMenu.insertAdjacentHTML("beforeend", videoElementHTML);
+  setTimeout(() => document.querySelector(".glitch-video").remove(), 300);
+  instructionsText.classList.remove("hide");
+  interactiveMenuContent.classList.add("hide");
+}
