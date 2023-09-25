@@ -344,3 +344,10 @@ function restartGame() {
   initCountdown(timerSeconds);
   generateTiles(tileData);
 }
+
+// ---------------------
+// Event Listeners
+// ---------------------
+menuButtons.forEach((button) => {
+  button.addEventListener("click", handleMenuButtonClick);
+});
