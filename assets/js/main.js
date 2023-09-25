@@ -330,3 +330,17 @@ function hideInstructions() {
   instructionsText.classList.add("hide");
   interactiveMenuContent.classList.remove("hide");
 }
+
+/**
+ * Resets and restarts the game, including reinitializing lives, timer, and tiles.
+ */
+function restartGame() {
+  document.querySelector(".victory-screen")?.remove();
+  document.querySelector(".game-over-screen")?.remove();
+  playerLives = gameDifficulties[gameDifficulty].playerLives;
+  timerSeconds = gameDifficulties[gameDifficulty].timerSeconds;
+  playerLivesDisplay.textContent = playerLives;
+  clearTiles();
+  initCountdown(timerSeconds);
+  generateTiles(tileData);
+}
