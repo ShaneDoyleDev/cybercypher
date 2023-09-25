@@ -102,3 +102,23 @@ function createTileElement(tileData) {
 
   return tileElement;
 }
+
+/**
+ * Handles a click event on a tile. When a tile is clicked, a random glitch video effect plays over the tile. If two tiles are "activated" (revealed),mit checks if they match.
+ *
+ * @param {Event} event - The click event object.
+ */
+function handleTileClick(event) {
+  const randomNum = getRandomNumber(1, 4);
+  const videoElementHTML = `
+    <video class="glitch-video" autoplay muted>
+        <source src="assets/videos/glitch-effect-${randomNum}.mp4" type="video/mp4" />
+    </video>
+  `;
+  event.currentTarget.insertAdjacentHTML("beforeend", videoElementHTML);
+  setTimeout(() => document.querySelector(".glitch-video").remove(), 300);
+
+  event.currentTarget.classList.add("reveal-tile", "activated", "no-click");
+  const selectedTiles = document.querySelectorAll(".activated");
+  selectedTiles.length === 2 && checkForMatchingTiles(selectedTiles);
+}
