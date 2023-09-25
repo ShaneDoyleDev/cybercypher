@@ -1,1 +1,16 @@
 @import url("https://use.typekit.net/dui0wne.css");
+
+/* ------------------- */
+/* CSS Variables       */
+/* ------------------- */
+
+:root {
+  --clr-white: #f9ebe8;
+  --clr-black: #231d1d;
+  --clr-cyan: #7dffff;
+
+  --text-primary: "magistral", sans-serif;
+
+  --base-grid-size: 4rem;
+  --scale-factor: 8vw;
+}
