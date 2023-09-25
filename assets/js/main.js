@@ -351,3 +351,5 @@ function restartGame() {
 menuButtons.forEach((button) => {
   button.addEventListener("click", handleMenuButtonClick);
 });
+
+instructionsButton.addEventListener("click", revealInstructions);
