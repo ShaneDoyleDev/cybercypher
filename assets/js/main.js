@@ -254,3 +254,19 @@ function showGameOverScreen() {
       .addEventListener("click", restartGame);
   }, TIMEOUT_DURATION - 500);
 }
+
+// ---------------------
+// Game State Functions
+// ---------------------
+
+/**
+ * Handles the menu button click, sets game difficulty, updates lives, and starts the game.
+ * @param {Event} event - The click event object.
+ */
+function handleMenuButtonClick(event) {
+  gameDifficulty = event.currentTarget.textContent.toLowerCase();
+  playerLives = gameDifficulties[gameDifficulty].playerLives;
+  timerSeconds = gameDifficulties[gameDifficulty].timerSeconds;
+  playerLivesDisplay.textContent = playerLives;
+  startGame();
+}
