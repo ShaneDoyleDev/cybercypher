@@ -178,3 +178,18 @@ function initCountdown(totalSeconds) {
     }
   }, 10);
 }
+
+// ---------------------
+// Game Logic Functions
+// ---------------------
+
+/**
+ * Populates the grid with shuffled tiles.
+ *
+ * @param {Array} tileData - Array of tile information.
+ */
+function generateTiles(tileData) {
+  shuffle(tileData).forEach((tile) => {
+    grid.appendChild(createTileElement(tile));
+  });
+}
