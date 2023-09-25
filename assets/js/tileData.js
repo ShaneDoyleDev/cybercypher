@@ -1,0 +1,18 @@
+export default [
+  { imgSrc: "assets/images/tiles/tile-1.svg", name: "tile 1" },
+  { imgSrc: "assets/images/tiles/tile-2.svg", name: "tile 2" },
+  { imgSrc: "assets/images/tiles/tile-3.svg", name: "tile 3" },
+  { imgSrc: "assets/images/tiles/tile-4.svg", name: "tile 4" },
+  { imgSrc: "assets/images/tiles/tile-5.svg", name: "tile 5" },
+  { imgSrc: "assets/images/tiles/tile-6.svg", name: "tile 6" },
+  { imgSrc: "assets/images/tiles/tile-7.svg", name: "tile 7" },
+  { imgSrc: "assets/images/tiles/tile-8.svg", name: "tile 8" },
+  { imgSrc: "assets/images/tiles/tile-1.svg", name: "tile 1" },
+  { imgSrc: "assets/images/tiles/tile-2.svg", name: "tile 2" },
+  { imgSrc: "assets/images/tiles/tile-3.svg", name: "tile 3" },
+  { imgSrc: "assets/images/tiles/tile-4.svg", name: "tile 4" },
+  { imgSrc: "assets/images/tiles/tile-5.svg", name: "tile 5" },
+  { imgSrc: "assets/images/tiles/tile-6.svg", name: "tile 6" },
+  { imgSrc: "assets/images/tiles/tile-7.svg", name: "tile 7" },
+  { imgSrc: "assets/images/tiles/tile-8.svg", name: "tile 8" },
+];
