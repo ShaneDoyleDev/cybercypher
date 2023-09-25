@@ -208,3 +208,25 @@ function decrementPlayerLives() {
   playerLives--;
   playerLivesDisplay.textContent = playerLives;
 }
+
+/**
+ * Stops the countdown, plays a random glitch video, and then displays the victory screen.
+ * Offers an option to restart the game.
+ */
+function showVictoryScreen() {
+  clearInterval(countdownInterval);
+  const randomNum = getRandomNumber(1, 4);
+  const videoElementHTML = `
+    <video class="glitch-video" autoplay muted>
+        <source src="assets/videos/glitch-effect-${randomNum}.mp4" type="video/mp4" />
+    </video>
+  `;
+  grid.insertAdjacentHTML("beforeend", videoElementHTML);
+  setTimeout(() => {
+    grid.innerHTML = "";
+    grid.insertAdjacentHTML("beforeend", victoryScreenHTML);
+    document
+      .querySelector(".restart-button")
+      .addEventListener("click", restartGame);
+  }, TIMEOUT_DURATION - 500);
+}
