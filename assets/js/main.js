@@ -230,3 +230,27 @@ function showVictoryScreen() {
       .addEventListener("click", restartGame);
   }, TIMEOUT_DURATION - 500);
 }
+
+/**
+ * Stops the countdown, plays a random glitch video, and then displays the game over screen.
+ * Offers an option to restart the game.
+ */
+function showGameOverScreen() {
+  clearInterval(countdownInterval);
+
+  const randomNum = getRandomNumber(1, 4);
+  const videoElementHTML = `
+    <video class="glitch-video" autoplay muted>
+        <source src="assets/videos/glitch-effect-${randomNum}.mp4" type="video/mp4" />
+    </video>
+  `;
+  grid.insertAdjacentHTML("beforeend", videoElementHTML);
+
+  setTimeout(() => {
+    grid.innerHTML = "";
+    grid.insertAdjacentHTML("beforeend", gameOverScreenHTML);
+    document
+      .querySelector(".restart-button")
+      .addEventListener("click", restartGame);
+  }, TIMEOUT_DURATION - 500);
+}
