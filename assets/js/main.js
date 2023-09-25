@@ -122,3 +122,34 @@ function handleTileClick(event) {
   const selectedTiles = document.querySelectorAll(".activated");
   selectedTiles.length === 2 && checkForMatchingTiles(selectedTiles);
 }
+
+/**
+ * Checks if two tiles match based on 'data-name'.
+ * On a match, tiles are marked and click events removed.
+ * On mismatch, tiles flip back and player's lives decrement.
+ *
+ * @param {Array} tiles - Contains two tiles ([firstTile, secondTile]) to check.
+ */
+function checkForMatchingTiles([firstTile, secondTile]) {
+  if (
+    firstTile.getAttribute("data-name") === secondTile.getAttribute("data-name")
+  ) {
+    [firstTile, secondTile].forEach((tile) => {
+      tile.classList.add("matched");
+      tile.classList.remove("activated");
+      tile.removeEventListener("click", handleTileClick);
+      document.querySelectorAll(".matched").length === 16 &&
+        showVictoryScreen();
+    });
+  } else {
+    grid.classList.add("no-click");
+    setTimeout(() => {
+      grid.classList.remove("no-click");
+      [firstTile, secondTile].forEach((tile) => {
+        tile.classList.remove("reveal-tile", "activated", "no-click");
+      });
+    }, TIMEOUT_DURATION);
+    decrementPlayerLives();
+    if (playerLives === 0) showGameOverScreen();
+  }
+}
