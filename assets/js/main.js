@@ -193,3 +193,10 @@ function generateTiles(tileData) {
     grid.appendChild(createTileElement(tile));
   });
 }
+
+/**
+ * Clears all tiles from the grid.
+ */
+function clearTiles() {
+  grid.innerHTML = "";
+}
