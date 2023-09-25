@@ -153,3 +153,28 @@ function checkForMatchingTiles([firstTile, secondTile]) {
     if (playerLives === 0) showGameOverScreen();
   }
 }
+
+// -----------------
+// Timer Functions
+// -----------------
+
+/**
+ * Initializes a countdown based on the given duration in seconds.
+ * Updates a visual representation and ends the game once time runs out.
+ *
+ * @param {number} totalSeconds - Duration of the countdown in seconds.
+ */
+function initCountdown(totalSeconds) {
+  const startTime = Date.now();
+
+  countdownInterval = setInterval(() => {
+    const elapsedTime = Date.now() - startTime;
+    const totalMilliseconds = totalSeconds * 1000;
+    const elapsedPercentage = (elapsedTime / totalMilliseconds) * 100;
+    timeRemaining.style.width = `${elapsedPercentage}%`;
+    if (elapsedTime >= totalMilliseconds) {
+      clearInterval(countdownInterval);
+      showGameOverScreen();
+    }
+  }, 10);
+}
