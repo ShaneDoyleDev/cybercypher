@@ -353,3 +353,5 @@ menuButtons.forEach((button) => {
 });
 
 instructionsButton.addEventListener("click", revealInstructions);
+
+instructionsBackButton.addEventListener("click", hideInstructions);
