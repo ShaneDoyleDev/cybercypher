@@ -200,3 +200,11 @@ function generateTiles(tileData) {
 function clearTiles() {
   grid.innerHTML = "";
 }
+
+/**
+ * Decreases the player's lives count and updates the display.
+ */
+function decrementPlayerLives() {
+  playerLives--;
+  playerLivesDisplay.textContent = playerLives;
+}
