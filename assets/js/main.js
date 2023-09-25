@@ -270,3 +270,13 @@ function handleMenuButtonClick(event) {
   playerLivesDisplay.textContent = playerLives;
   startGame();
 }
+
+/**
+ * Initiates the game by revealing the grid, setting the countdown, and populating tiles.
+ */
+function startGame() {
+  revealGrid();
+  clearTiles();
+  initCountdown(timerSeconds);
+  generateTiles(tileData);
+}
