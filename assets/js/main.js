@@ -71,3 +71,34 @@ const gameOverScreenHTML = `
         <button class="button restart-button">Try again</button>
     </div>
 `;
+
+// ---------------------
+// Utility Functions
+// ---------------------
+
+/**
+ * Creates a DOM element for a tile with an image face and a back.
+ *
+ * @param {Object} tileData - Object with 'name' (tile identifier) and 'imgSrc' (image URL).
+ * @returns {HTMLElement} - Tile element with an image face and a back div.
+ */
+function createTileElement(tileData) {
+  const tileElement = document.createElement("div");
+  const tileFace = document.createElement("img");
+  const tileBack = document.createElement("div");
+
+  tileElement.setAttribute("data-name", tileData.name);
+  tileFace.src = tileData.imgSrc;
+  tileFace.alt = tileData.name;
+
+  tileElement.classList.add("tile");
+  tileFace.classList.add("tile-face");
+  tileBack.classList.add("tile-back");
+
+  tileElement.addEventListener("click", handleTileClick);
+
+  tileElement.append(tileFace);
+  tileElement.append(tileBack);
+
+  return tileElement;
+}
