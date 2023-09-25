@@ -289,3 +289,12 @@ function revealGrid() {
   menuFrame.classList.add("hide");
   gridContainer.classList.remove("hide");
 }
+
+/**
+ * Hides the game grid and reveals the menu frame and content.
+ */
+function revealMenu() {
+  menuContent.classList.remove("hide");
+  menuFrame.classList.remove("hide");
+  gridContainer.classList.add("hide");
+}
