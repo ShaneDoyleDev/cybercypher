@@ -363,3 +363,25 @@ body {
 .reveal-tile {
   transform: rotateY(180deg);
 }
+
+/* ------------------------ */
+/* Countdown Bar Styles     */
+/* ------------------------ */
+
+.countdown-bar {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 80%;
+  height: 5px;
+  background: var(--clr-cyan);
+  border: var(--clr-cyan) 0.1px solid;
+  transform: skew(-25deg);
+  transition: all 1s ease;
+  animation: glow-pulse 5s infinite ease-in-out;
+}
+
+.time-remaining {
+  background: var(--clr-black);
+  width: 0%;
+  height: 100%;
+}
