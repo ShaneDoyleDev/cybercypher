@@ -280,3 +280,12 @@ function startGame() {
   initCountdown(timerSeconds);
   generateTiles(tileData);
 }
+
+/**
+ * Reveals the game grid and hides the menu frame and content.
+ */
+function revealGrid() {
+  menuContent.classList.add("hide");
+  menuFrame.classList.add("hide");
+  gridContainer.classList.remove("hide");
+}
