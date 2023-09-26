@@ -174,6 +174,13 @@ function initCountdown(totalSeconds) {
     const elapsedTime = Date.now() - startTime;
     const totalMilliseconds = totalSeconds * 1000;
     const elapsedPercentage = (elapsedTime / totalMilliseconds) * 100;
+
+    if (elapsedPercentage >= 70) {
+      countdownBarContainer.classList.add("warning-flash");
+    } else {
+      countdownBarContainer.classList.remove("warning-flash");
+    }
+
     timeRemaining.style.width = `${elapsedPercentage}%`;
     if (elapsedTime >= totalMilliseconds) {
       clearInterval(countdownInterval);
@@ -217,6 +224,7 @@ function decrementPlayerLives() {
  * Offers an option to restart the game.
  */
 function showVictoryScreen() {
+  countdownBarContainer.classList.remove("warning-flash");
   clearInterval(countdownInterval);
   const randomNum = getRandomNumber(1, 4);
   const videoElementHTML = `
@@ -239,6 +247,7 @@ function showVictoryScreen() {
  * Offers an option to restart the game.
  */
 function showGameOverScreen() {
+  countdownBarContainer.classList.remove("warning-flash");
   clearInterval(countdownInterval);
 
   const randomNum = getRandomNumber(1, 4);
