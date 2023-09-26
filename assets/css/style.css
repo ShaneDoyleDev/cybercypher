@@ -368,6 +368,11 @@ body {
 /* Countdown Bar Styles     */
 /* ------------------------ */
 
+.countdown-bar-container {
+  width: 100%;
+  opacity: 1;
+}
+
 .countdown-bar {
   display: flex;
   flex-direction: row-reverse;
@@ -377,6 +382,7 @@ body {
   border: var(--clr-cyan) 0.1px solid;
   transform: skew(-25deg);
   transition: all 1s ease;
+  margin-inline: auto;
   animation: glow-pulse 5s infinite ease-in-out;
 }
 
