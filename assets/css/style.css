@@ -209,6 +209,11 @@ body {
   gap: 20px;
 }
 
+.interactive-menu-text {
+  font-size: 1.5rem;
+  margin-block: -7px;
+}
+
 .instructions-text {
   display: flex;
   flex-direction: column;
@@ -242,6 +247,10 @@ body {
   .menu-content {
     gap: 5px;
     padding-inline: 30px;
+  }
+
+  .interactive-menu-text {
+    font-size: 1.7rem;
   }
 
   .instructions-button {
