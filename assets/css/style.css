@@ -102,3 +102,180 @@ body {
 .button:active {
   transform: scale(0.95);
 }
+
+/* ------------------- */
+/* Main Menu Styles    */
+/* ------------------- */
+
+.menu {
+  position: absolute;
+  width: 90%;
+  max-width: 600px;
+  min-width: 300px;
+  height: 640px;
+  border-radius: 30px;
+  clip-path: polygon(8% 0%, 100% 0, 100% 92%, 92% 100%, 0 100%, 0% 8%);
+}
+
+.menu-frame {
+  background-color: var(--clr-white);
+  transform: scale(1.01);
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  padding-block: 40px;
+  padding-inline: 20px;
+  background-color: var(--clr-black);
+}
+
+.menu-title {
+  width: 100%;
+  height: 50px;
+}
+
+.title-border {
+  background-color: var(--clr-cyan);
+  height: 5px;
+  border: none;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10px;
+  margin: 20px auto;
+}
+
+.loading-bar {
+  width: 75%;
+}
+
+.battery-meter {
+  width: 20%;
+}
+
+.menu-design-elements {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+}
+
+.barcode {
+  width: 35%;
+  height: 100%;
+}
+
+.k-triangle {
+  width: 20%;
+  height: 100%;
+}
+
+.prototype {
+  width: 35%;
+  height: 100%;
+}
+
+.interactive-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("../images/menu/radar-background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  border: 2px solid var(--clr-white);
+  border-radius: 15px;
+  margin-inline: auto;
+  overflow: hidden;
+  filter: drop-shadow(0 0 50px #2bfed436);
+}
+
+.interactive-menu-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  gap: 20px;
+}
+
+.instructions-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  position: relative;
+  padding: 1rem;
+  color: var(--clr-cyan);
+  font-size: 1.3rem;
+}
+
+.instructions-button {
+  width: 50px;
+  position: absolute;
+  bottom: 5%;
+  right: 1%;
+  cursor: pointer;
+}
+
+.instructions-back-button {
+  margin-top: 10px;
+}
+
+/* Main Menu Media Queries */
+@media screen and (min-width: 400px) {
+  .menu-title {
+    margin-block: 10px;
+  }
+
+  .menu-content {
+    gap: 5px;
+    padding-inline: 30px;
+  }
+
+  .instructions-button {
+    width: 60px;
+    right: 3%;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .menu-title {
+    margin-block: 15px;
+  }
+
+  .menu-content {
+    gap: 15px;
+  }
+
+  .instructions-text {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  .menu-content {
+    padding-inline: 40px;
+    gap: 20px;
+  }
+
+  .interactive-menu {
+    height: 230px;
+  }
+
+  .instructions-text {
+    font-size: 1.5rem;
+  }
+}
