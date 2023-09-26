@@ -426,6 +426,10 @@ body {
   color: var(--clr-white);
 }
 
+.warning-flash {
+  animation: warning-flash 1s infinite;
+}
+
 .glitch-video {
   position: absolute;
   top: 0;
@@ -546,5 +550,17 @@ body {
   50% {
     box-shadow: 0 0 7px #00ffff, 0 0 14px #00ffff, 0 0 7px #00ffff14,
       0 0 14px #00ffff2e, 0 0 14px #00ffff16, 0 4px 27px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@keyframes warning-flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
