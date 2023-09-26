@@ -10,6 +10,9 @@ const menuFrame = document.querySelector(".menu-frame");
 const gridContainer = document.querySelector(".grid-container");
 const grid = document.querySelector(".grid");
 const playerLivesDisplay = document.querySelector(".player-lives-display");
+const countdownBarContainer = document.querySelector(
+  ".countdown-bar-container"
+);
 const timeRemaining = document.querySelector(".time-remaining");
 const interactiveMenu = document.querySelector(".interactive-menu");
 const interactiveMenuContent = document.querySelector(
