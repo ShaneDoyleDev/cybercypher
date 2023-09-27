@@ -70,8 +70,11 @@ const victoryScreenHTML = `
 
 const gameOverScreenHTML = `
     <div class="ui-template-screen crt">
-        <h1 class="game-over-title">❌ Access Denied ❌</h1>
-        <button class="button restart-button">Try again</button>
+        <img class="warning-triangle"
+  src="../assets/images/warning-triangle.svg"
+  alt="a warning triangle"
+/>
+        <button class="button restart-button"><span class="icon-rotate-ccw"></span>Try again</button>
     </div>
 `;
 
