@@ -47,3 +47,27 @@ const gameDifficulties = {
     timerSeconds: 30,
   },
 };
+
+// --------------
+// UI Templates
+// --------------
+
+const victoryScreenHTML = `
+    <div class="ui-template-screen crt">
+        <img class="access-granted"
+  src="../assets/images/access-granted.svg"
+  alt="an access granted symbol"
+/>
+        <button class="button restart-button"><span class="icon-rotate-ccw"></span>Play again</button>
+        <video class="victory-video-background" autoplay muted>
+            <source src="../assets/videos/matrix-effect.mp4" type="video/mp4">
+        </video>
+    </div>
+`;
+
+const gameOverScreenHTML = `
+    <div class="ui-template-screen crt">
+        <h1 class="game-over-title">❌ Access Denied ❌</h1>
+        <button class="button restart-button">Try again</button>
+    </div>
+`;
