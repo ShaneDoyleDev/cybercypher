@@ -483,6 +483,15 @@ body {
   animation: warning-flash 2s infinite;
 }
 
+/* -------------------*/
+/* 404 Page Styles    */
+/* -------------------*/
+
+.page-404-image {
+  max-width: 300px;
+  transform: translateX(8%);
+}
+
 /* ------------------- */
 /* Utility Styles      */
 /* ------------------- */
