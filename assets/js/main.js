@@ -115,7 +115,7 @@ function createTileElement(tileData) {
  * @param {Event} event - The click event object.
  */
 function handleTileClick(event) {
-  const randomNum = getRandomNumber(1, 4);
+  const randomNum = getRandomNumber(1, 3);
   const videoElementHTML = `
     <video class="glitch-video" autoplay muted>
         <source src="assets/videos/glitch-effect-${randomNum}.mp4" type="video/mp4" />
@@ -229,7 +229,7 @@ function decrementPlayerLives() {
 function showVictoryScreen() {
   countdownBarContainer.classList.remove("warning-flash");
   clearInterval(countdownInterval);
-  const randomNum = getRandomNumber(1, 4);
+  const randomNum = getRandomNumber(1, 3);
   const videoElementHTML = `
     <video class="glitch-video" autoplay muted>
         <source src="assets/videos/glitch-effect-${randomNum}.mp4" type="video/mp4" />
@@ -253,7 +253,7 @@ function showGameOverScreen() {
   countdownBarContainer.classList.remove("warning-flash");
   clearInterval(countdownInterval);
 
-  const randomNum = getRandomNumber(1, 4);
+  const randomNum = getRandomNumber(1, 3);
   const videoElementHTML = `
     <video class="glitch-video" autoplay muted>
         <source src="assets/videos/glitch-effect-${randomNum}.mp4" type="video/mp4" />
@@ -318,7 +318,7 @@ function revealMenu() {
  * Plays a random glitch video and displays the game instructions.
  */
 function revealInstructions() {
-  const randomNum = getRandomNumber(1, 4);
+  const randomNum = getRandomNumber(1, 3);
   const videoElementHTML = `
     <video class="glitch-video" autoplay muted>
         <source src="assets/videos/glitch-effect-${randomNum}.mp4" type="video/mp4" />
@@ -334,7 +334,7 @@ function revealInstructions() {
  * Plays a random glitch video and hides the game instructions, revealing the main menu.
  */
 function hideInstructions() {
-  const randomNum = getRandomNumber(1, 4);
+  const randomNum = getRandomNumber(1, 3);
   const videoElementHTML = `
     <video class="glitch-video" autoplay muted>
         <source src="assets/videos/glitch-effect-${randomNum}.mp4" type="video/mp4" />
