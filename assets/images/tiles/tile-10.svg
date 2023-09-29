@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="259.87" viewBox="0 0 300 259.87">
+    <defs>
+        <style>
+            .cls-1 {
+                mix-blend-mode: hard-light;
+            }
+
+            .cls-2 {
+                opacity: .5;
+            }
+
+            .cls-2,
+            .cls-3 {
+                fill: #8ceeee;
+
+            }
+
+            .cls-4 {
+                isolation: isolate;
+            }
+        </style>
+    </defs>
+    <g class="cls-4">
+        <g id="Layer_1" data-name="Layer 1">
+            <g id="tile10" class="cls-1">
+                <g>
+                    <polygon class="cls-2" points="83.42 166.8 63.58 145.29 0 255.41 49.19 226.09 83.42 166.8" />
+                    <polygon class="cls-2" points="202.19 140.38 222.03 118.86 153.41 0 153.41 55.88 202.19 140.38" />
+                    <polygon class="cls-3" points="251.92 226.51 300 253.91 237.29 145.29 217.45 166.8 251.92 226.51" />
+                    <polygon class="cls-3" points="147.46 55.88 147.46 0 78.84 118.86 98.67 140.38 147.46 55.88" />
+                    <polygon class="cls-2" points="165 231.93 165 259.87 298.45 259.87 249.42 231.93 165 231.93" />
+                    <polygon class="cls-3" points="51 231.93 4.13 259.87 135.87 259.87 135.87 231.93 51 231.93" />
+                </g>
+                <polygon class="cls-3"
+                    points="134.84 184.65 104.51 149.63 150 158.38 195.49 149.63 165.16 184.65 150 228.41 134.84 184.65" />
+            </g>
+        </g>
+    </g>
+</svg>

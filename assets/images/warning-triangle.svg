@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="334.12" height="285.18" viewBox="0 0 334.12 285.18">
+    <defs>
+        <style>
+            .cls-1 {
+                letter-spacing: -.02em;
+            }
+
+            .cls-2 {
+                letter-spacing: -.03em;
+            }
+
+            .cls-3 {
+                font-family: Magistral-ExtraBold, Magistral;
+                font-size: 50px;
+            }
+
+            .cls-3,
+            .cls-4 {
+                font-weight: 700;
+            }
+
+            .cls-3,
+            .cls-4,
+            .cls-5 {
+                fill: #f65235;
+            }
+
+            .cls-4 {
+                font-family: Magistral-Bold, Magistral;
+                font-size: 40px;
+            }
+
+            .cls-6 {
+                letter-spacing: 0em;
+            }
+
+            .cls-5 {
+                stroke-width: 0px;
+            }
+        </style>
+    </defs>
+    <g id="text">
+        <text class="cls-3" transform="translate(20.63 228.38)">
+            <tspan class="cls-1" x="0" y="0">W</tspan>
+            <tspan x="57.4" y="0">ARNING!</tspan>
+        </text>
+        <text class="cls-4" transform="translate(.8 273.38)">
+            <tspan x="0" y="0">A</tspan>
+            <tspan class="cls-2" x="30.32" y="0">C</tspan>
+            <tspan x="55.44" y="0">CE</tspan>
+            <tspan class="cls-6" x="109" y="0">S</tspan>
+            <tspan x="136.2" y="0">S DENIED</tspan>
+        </text>
+    </g>
+    <g id="triangle">
+        <g>
+            <polygon class="cls-5" points="165.56 52 165.56 0 84.97 139.58 114.99 139.58 165.56 52" />
+            <polygon class="cls-5" points="219.12 139.58 249.14 139.58 168.56 0 168.56 52 219.12 139.58" />
+            <polygon class="cls-5"
+                points="113.26 142.58 83.24 142.58 68.23 168.58 265.89 168.58 250.88 142.58 220.85 142.58 113.26 142.58" />
+            <rect class="cls-5" x="162.56" y="80.12" width="8.99" height="37.03" />
+            <circle class="cls-5" cx="167.06" cy="128.38" r="5.89" />
+        </g>
+    </g>
+</svg>
