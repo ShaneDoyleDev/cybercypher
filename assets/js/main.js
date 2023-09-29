@@ -351,8 +351,16 @@ function hideInstructions() {
  * Resets and restarts the game, including reinitializing lives, timer, and tiles.
  */
 function restartGame() {
-  document.querySelector(".victory-screen")?.remove();
-  document.querySelector(".game-over-screen")?.remove();
+  const victoryScreen = document.querySelector(".victory-screen");
+  if (victoryScreen) {
+    victoryScreen.remove();
+  }
+
+  const gameOverScreen = document.querySelector(".game-over-screen");
+  if (gameOverScreen) {
+    gameOverScreen.remove();
+  }
+
   playerLives = gameDifficulties[gameDifficulty].playerLives;
   timerSeconds = gameDifficulties[gameDifficulty].timerSeconds;
   playerLivesDisplay.textContent = playerLives;
