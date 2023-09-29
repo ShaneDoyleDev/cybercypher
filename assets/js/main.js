@@ -58,12 +58,12 @@ const gameDifficulties = {
 const victoryScreenHTML = `
     <div class="ui-template-screen crt">
         <img class="access-granted"
-  src="../assets/images/access-granted.svg"
+  src="assets/images/access-granted.svg"
   alt="an access granted symbol"
 />
         <button class="button restart-button"><span class="icon-rotate-ccw"></span>Play again</button>
         <video class="victory-video-background" autoplay muted>
-            <source src="../assets/videos/matrix-effect.mp4" type="video/mp4">
+            <source src="assets/videos/matrix-effect.mp4" type="video/mp4">
         </video>
     </div>
 `;
