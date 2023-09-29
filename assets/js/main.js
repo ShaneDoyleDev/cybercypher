@@ -126,7 +126,7 @@ function handleTileClick(event) {
 
   event.currentTarget.classList.add("reveal-tile", "activated", "no-click");
   const selectedTiles = document.querySelectorAll(".activated");
-  selectedTiles.length === 2 && checkForMatchingTiles(selectedTiles);
+  if (selectedTiles.length === 2) checkForMatchingTiles(selectedTiles);
 }
 
 /**
@@ -144,8 +144,9 @@ function checkForMatchingTiles([firstTile, secondTile]) {
       tile.classList.add("matched");
       tile.classList.remove("activated");
       tile.removeEventListener("click", handleTileClick);
-      document.querySelectorAll(".matched").length === 16 &&
+      if (document.querySelectorAll(".matched").length === 16) {
         showVictoryScreen();
+      }
     });
   } else {
     grid.classList.add("no-click");
